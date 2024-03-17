@@ -47,8 +47,6 @@ dependencies:
   flutter_rating_stars: ^1.0.3+4
   flutter_rating_bar: ^4.0.1
   pay: ^2.0.0
-  charts_flutter_updated: ^0.13.0
-  fl_chart: ^0.66.2
   
 
 dev_dependencies:

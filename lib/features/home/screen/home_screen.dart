@@ -5,9 +5,6 @@ import 'package:amazone_clone/features/home/widgets/deals_of_day.dart';
 import 'package:amazone_clone/features/home/widgets/top_categories.dart';
 import 'package:amazone_clone/features/search/screens/search_screen.dart';
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
-
-import '../../../provider/user_provider.dart';
 
 class HomeScreen extends StatefulWidget {
   static const String routeName = '/home';
@@ -24,9 +21,6 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
-    final user = Provider.of<UserProvider>(context).user;
-    print('Name: ${user.name}, token: ${user.token}');
-
     return Scaffold(
       appBar: PreferredSize(
         preferredSize: const Size.fromHeight(60),

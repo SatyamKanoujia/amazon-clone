@@ -3,10 +3,8 @@ import 'package:amazone_clone/features/account/screens/account_screen.dart';
 import 'package:amazone_clone/features/cart/screens/cart_screen.dart';
 import 'package:amazone_clone/features/home/screen/home_screen.dart';
 import 'package:amazone_clone/provider/user_provider.dart';
-//import 'package:amazone_clone/provider/user_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-//import 'package:provider/provider.dart';
 
 class BottomBar extends StatefulWidget {
   static const String routeName = '/actual-home';

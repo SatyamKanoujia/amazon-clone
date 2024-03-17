@@ -5,6 +5,7 @@ import 'package:amazone_clone/features/search/screens/search_screen.dart';
 import 'package:amazone_clone/models/order.dart';
 import 'package:amazone_clone/provider/user_provider.dart';
 import 'package:flutter/material.dart';
+// ignore: depend_on_referenced_packages
 import 'package:intl/intl.dart';
 import 'package:provider/provider.dart';
 

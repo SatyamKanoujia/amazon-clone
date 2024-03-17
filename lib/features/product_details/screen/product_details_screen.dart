@@ -5,13 +5,10 @@ import 'package:amazone_clone/features/product_details/services/product_details_
 import 'package:amazone_clone/features/search/screens/search_screen.dart';
 import 'package:amazone_clone/models/product.dart';
 import 'package:amazone_clone/provider/user_provider.dart';
-//import 'package:amazone_clone/provider/user_provider.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
-
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:provider/provider.dart';
-//import 'package:provider/provider.dart';
 
 class ProductDetailScreen extends StatefulWidget {
   static const String routeName = '/product-details';
@@ -31,6 +28,7 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
   double avgRating = 0;
   double myRating = 0;
 
+  // ignore: annotate_overrides
   void initState() {
     super.initState();
     double totalRating = 0;
