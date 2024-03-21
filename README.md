@@ -67,10 +67,10 @@ Full Stack Amazon Clone along with Admin Panel
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
 ## Running Locally
-After cloning this repository, migrate to ```flutter-amazon-clone-tutorial``` folder. Then, follow the following steps:
+After cloning this repository, migrate to ```amazone_clone``` folder. Then, follow the following steps:
 - Create MongoDB Project & Cluster
 - Click on Connect, follow the process where you will get the uri.- Replace the MongoDB uri with yours in ```server/index.js```.
-- Head to ```lib/constants/global_variables.dart``` file, replace <yourip> with your IP Address. 
+- Head to ```lib/constant/global_variable.dart``` file, replace <yourip> with your IP Address. 
 - Create Cloudinary Project, enable unsigned operation in settings.
 - Head to ```lib/features/admin/services/admin_services.dart```, replace ```dhch0lsvt``` and ```nxv7mlgl``` with your Cloud Name and Upload Preset respectively.
 
