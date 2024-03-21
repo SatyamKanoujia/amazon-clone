@@ -36,17 +36,20 @@ class _OrderDetailScreenState extends State<OrderDetailScreen> {
   }
 
   // !!! ONLY FOR ADMIN!!!
+  // Update the changeOrderStatus method
   void changeOrderStatus(int status) {
-    adminServices.changeOrderStatus(
-      context: context,
-      status: status + 1,
-      order: widget.order,
-      onSuccess: () {
-        setState(() {
-          currentStep += 1;
-        });
-      },
-    );
+    if (status < 3) {
+      adminServices.changeOrderStatus(
+        context: context,
+        status: status + 1,
+        order: widget.order,
+        onSuccess: () {
+          setState(() {
+            currentStep += 1;
+          });
+        },
+      );
+    }
   }
 
   @override

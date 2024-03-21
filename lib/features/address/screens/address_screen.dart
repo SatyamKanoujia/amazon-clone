@@ -36,7 +36,7 @@ class _AddressScreenState extends State<AddressScreen> {
     super.initState();
     paymentItems.add(
       PaymentItem(
-        amount: widget.totalAmount,
+        amount: widget.totalAmount.toString(),
         label: 'Total Amount',
         status: PaymentItemStatus.final_price,
       ),
@@ -51,21 +51,6 @@ class _AddressScreenState extends State<AddressScreen> {
     pincodeController.dispose();
     cityController.dispose();
   }
-
-  // void onApplePayResult(res) {
-  //   if (Provider.of<UserProvider>(context, listen: false)
-  //       .user
-  //       .address
-  //       .isEmpty) {
-  //     addressServices.saveUserAddress(
-  //         context: context, address: addressToBeUsed);
-  //   }
-  //   addressServices.placeOrder(
-  //     context: context,
-  //     address: addressToBeUsed,
-  //     totalSum: double.parse(widget.totalAmount),
-  //   );
-  // }
 
   void onGooglePayResult(res) {
     if (Provider.of<UserProvider>(context, listen: false)
@@ -184,17 +169,6 @@ class _AddressScreenState extends State<AddressScreen> {
                     ],
                   ),
                 ),
-                // ApplePayButton(
-                //   width: double.infinity,
-                //   style: ApplePayButtonStyle.whiteOutline,
-                //   type: ApplePayButtonType.buy,
-                //   paymentConfiguration: 'applepay.json',
-                //   onPaymentResult: onApplePayResult,
-                //   paymentItems: paymentItems,
-                //   margin: const EdgeInsets.only(top: 15),
-                //   height: 50,
-                //   onPressed: () => payPressed(address),
-                // ),
                 const SizedBox(height: 10),
                 FutureBuilder<PaymentConfiguration>(
                   future: _googlePayConfigFuture,
@@ -203,7 +177,7 @@ class _AddressScreenState extends State<AddressScreen> {
                       return GooglePayButton(
                         onPressed: () => payPressed(address),
                         paymentConfiguration: snapshot.data!,
-                        //onPaymentResult: onGooglePayResult,
+                        onPaymentResult: onGooglePayResult,
                         paymentItems: paymentItems,
                         height: 50,
                         width: double.infinity,
