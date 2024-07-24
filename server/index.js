@@ -2,7 +2,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 
 const app = express();
-const DB = "mongodb+srv://Satyam:noobmaster69@cluster0.89gk37x.mongodb.net/?retryWrites=true&w=majority";
+const DB = "your mongoDB uri";
 
 
 const authRouter = require("./routes/auth");
